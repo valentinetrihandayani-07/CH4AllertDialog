@@ -5,11 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".AlertDialogFragment">
 
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="masukkan nama" />
+
     <Button
-        android:id="@+id/btnDialogFragment"
+        android:id="@+id/fragment_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Dialog Fragment"/>
+        android:layout_marginTop="50dp"
+        android:text="Fragement Dialog" />
 
 </FrameLayout>
