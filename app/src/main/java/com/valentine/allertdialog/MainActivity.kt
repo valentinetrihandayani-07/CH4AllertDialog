@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnDialogPositiveNegative: Button
     private lateinit var btnCustomDialog: Button
     private lateinit var btnTutup: Button
+    private lateinit var ShowDialogFragmentButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,8 +21,7 @@ class MainActivity : AppCompatActivity() {
         btnDialogStandard = findViewById(R.id.btnDialogStandard)
         btnCustomDialog = findViewById(R.id.btnCustomDialog)
         btnDialogPositiveNegative = findViewById(R.id.btnDialogPositiveNegative)
-//        btnTutup = view.findViewBy(R.id.btnTutup)
-
+        ShowDialogFragmentButton = findViewById(R.id.btnFragmentMain)
 
         btnDialogStandard.setOnClickListener {
             val dialog = AlertDialog.Builder(this)
@@ -68,6 +68,10 @@ class MainActivity : AppCompatActivity() {
             }
 
             dialog.show()
+        }
+        ShowDialogFragmentButton.setOnClickListener {
+            val alertDialogFragment = AlertDialogFragment()
+            alertDialogFragment.show(supportFragmentManager, "tag")
         }
 
 
